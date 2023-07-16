@@ -1,0 +1,19 @@
+.navbar {
+    margin-top: 1em;
+}
+
+.navbarList {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbarList li {
+    margin-right: 1rem;
+}
+.navbarList li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
