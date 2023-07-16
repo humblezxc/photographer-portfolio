@@ -2,6 +2,10 @@ import Navbar from '../components/Navbar';
 import Head from "next/head";
 import styles from '../styles/Portfolio.module.css';
 import Home from "../components/Home";
+import Gallery from "../components/Gallery";
+import About from "../components/About";
+import Contact from "../components/Contact";
+import Section from "../components/Section";
 
 export default function Portfolio() {
   return (
@@ -10,23 +14,23 @@ export default function Portfolio() {
             <title>Photographer portfolio</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <header>
-            <Navbar />
-        </header>
+        {/*<header>*/}
+        {/*    <Navbar />*/}
+        {/*</header>*/}
         <main>
-            <section id="home">
+            <Navbar />
+            <Section id="home" title="Home">
                 <Home />
-              {/* Зображення та вміст головної сторінки */}
-            </section>
-            <section id="gallery">
-              {/* Зображення галереї */}
-            </section>
-            <section id="about">
-              {/* Інформація про фотографа */}
-            </section>
-            <section id="contact">
-              {/* Контактна інформація */}
-            </section>
+            </Section>
+            <Section id="gallery" title="Gallery">
+                <Gallery />
+            </Section>
+            <Section id="about" title="About">
+                <About />
+            </Section>
+            <Section id="contact" title="Contact">
+                <Contact />
+            </Section>
         </main>
 
       <footer>
