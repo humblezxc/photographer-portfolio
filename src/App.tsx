@@ -1,13 +1,12 @@
 import './App.scss'
 // import Header from "./components/Header.tsx";
 // import Footer from "./components/Footer.tsx";
-import BeforeAfterSliders from "./components/BeforeAfterSliders";
-import {presets} from "./data/presets";
+import Presets from "./pages/Presets.tsx";
 
 function App() {
     return (
         <div>
-            {presets.map(preset => <BeforeAfterSliders preset={preset} key={preset.id}/>)}
+            <Presets />
         </div>
     );
 }

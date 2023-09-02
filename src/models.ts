@@ -28,13 +28,5 @@ export interface IPresets {
                 imageUrl: string
             }
         },
-        {
-            beforeImg: {
-                imageUrl: string
-            }
-            afterImg: {
-                imageUrl: string
-            }
-        }
     ]
 }

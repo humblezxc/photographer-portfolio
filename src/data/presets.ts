@@ -3,7 +3,7 @@ import {IPresets} from "../models.ts";
 export const presets: IPresets[] = [
     {
         id: 1,
-        title: 'titleHAHA',
+        title: 'Family presets',
         titleImage: "src/assets/images/beforeAfter/imgFirstBefore.jpg",
         description: "Presets designed to process individual portrait shots, both plein air and studio.",
         sliderImages: [
@@ -30,14 +30,6 @@ export const presets: IPresets[] = [
                     imageUrl: 'src/assets/images/beforeAfter/imgThirdAfter.jpg',
                 },
             },
-            {
-                beforeImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgThirdBefore.jpg',
-                },
-                afterImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgThirdAfter.jpg',
-                },
-            }
         ],
     },
 ]
