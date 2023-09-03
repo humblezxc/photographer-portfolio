@@ -3,6 +3,11 @@ export interface IPresets {
     title: string
     titleImage: string
     description: string
+    packageInfo: string[]
+}
+
+export interface IPresetPhotos {
+    id: number
     sliderImages: [
         {
             beforeImg: {
