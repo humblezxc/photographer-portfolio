@@ -1,15 +1,17 @@
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
-import {IPresets} from "../models.ts";
+import {IPresetPhotos} from "../models.ts";
 
-interface PresetsProps {
-    preset: IPresets
+interface PresetPhotosProps {
+    photos: IPresetPhotos;
 }
-export default function BeforeAfterSliders({preset}: PresetsProps) {
+
+export default function BeforeAfterSliders({photos}: PresetPhotosProps) {
     return (
-            <div className="flex flex-col p-2 lg:flex-row">
-                {preset.sliderImages.map((image, index) => <ReactBeforeSliderComponent className="m-2" key={index}
-                                                                                       firstImage={image.beforeImg} secondImage={image.afterImg}/>)}
-            </div>
+        <div className="flex flex-col p-2 lg:flex-row">
+            {photos.sliderImages.map((image, index) => <ReactBeforeSliderComponent className="m-2" key={index}
+                                                                                   firstImage={image.beforeImg}
+                                                                                   secondImage={image.afterImg}/>)}
+        </div>
     );
 }
