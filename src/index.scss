@@ -7,8 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Playfair+Display&display=swap');
 
+html {
+  overflow-y: scroll;
+}
+
 body {
-  //display: flex;
   //place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -21,10 +24,10 @@ body, ul, li, p, h1, h2, h3, h4, h5, h6, button {
 }
 
 button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: var(--black-color);
+  //background-color: transparent;
+  //border: none;
+  //outline: none;
+  //color: var(--black-color);
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
 }
