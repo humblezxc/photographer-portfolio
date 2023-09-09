@@ -1,16 +1,16 @@
 .button {
-  --size: 40px;
+  --size: 50px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 0 var(--gap);
+  padding: 0 calc(var(--gap) / 2);
   height: var(--size);
   border: 1px solid var(--grey-color);
 
   color: var(--black-color);
-  border-radius: var(--size);
+  //border-radius: var(--size);
   transition: var(--transition);
   font: var(--smaller-font);
   cursor: pointer;
@@ -24,7 +24,12 @@
       fill: var(--white-color);
     }
   }
+  &_square {
+    padding: 0;
 
+    width: var(--size);
+    //border-width: 2px;
+  }
   &_round {
     padding: 0;
 
