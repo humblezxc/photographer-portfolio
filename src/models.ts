@@ -35,3 +35,14 @@ export interface IPresetPhotos {
         },
     ]
 }
+
+export interface IPriceOptions {
+    id: number
+    title: string
+    priceInfo: string[]
+    price: string
+    image: {
+            imageUrl: string
+            imageAlt: string
+        }
+}
