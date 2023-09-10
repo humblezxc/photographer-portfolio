@@ -4,6 +4,7 @@ const routes = {
     ABOUT: "about",
     CONTACT: "contact",
     PRESETS: "presets",
+    PRICE: "price",
 }
 
 export {routes}

@@ -7,6 +7,7 @@ import NotFoundPage from "./NotFoundPage.tsx";
 import Gallery from "../pages/Gallery.tsx";
 import About from "../pages/About.tsx";
 import Contact from "../pages/Contact.tsx";
+import Price from "../pages/Price.tsx";
 export default function AppRoutes(){
     return(
         <>
@@ -14,6 +15,7 @@ export default function AppRoutes(){
             <Route path={routes.ROOT} element={<Layout />}>
                 <Route index element={<Home />} />
                 <Route path={routes.GALLERY} element={<Gallery />}/>
+                <Route path={routes.PRICE} element={<Price />} />
                 <Route path={routes.ABOUT} element={<About />}/>
                 <Route path={routes.CONTACT} element={<Contact />}/>
                 <Route path={routes.PRESETS} element={<Presets />}/>

@@ -4,8 +4,8 @@ import {presets, presetPhotos} from "../data/presets.ts";
 
 export default function Presets() {
     return (
-        <main className="bg-purple-400">
-            <section className="bg-purple-300 container flex flex-col  py-5 w-full">
+        <main className="">
+            <section className="bg-white container flex flex-col  py-5 w-full">
                 {presets.map(preset => (
                     <div key={preset.id}>
                         <h1 className="text-center text-4xl mb-16">{preset.title}</h1>
