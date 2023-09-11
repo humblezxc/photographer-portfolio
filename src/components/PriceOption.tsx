@@ -11,13 +11,13 @@ export default function PriceOption({priceOption}: PriceOptionProps){
         <>
         {priceOption.id % 2 ?
             <div className="flex justify-between items-center">
-                <PriceOptionImages image={priceOption} />
+                <PriceOptionImages priceOptionImage={priceOption} />
                 <PriceOptionDetails priceOption={priceOption} />
             </div>
             :
             <div className="flex justify-between items-center">
                 <PriceOptionDetails priceOption={priceOption} />
-                <PriceOptionImages image={priceOption} />
+                <PriceOptionImages priceOptionImage={priceOption} />
             </div>
         }
         </>

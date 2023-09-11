@@ -46,3 +46,11 @@ export interface IPriceOptions {
             imageAlt: string
         }
 }
+
+export interface IProcessingImages {
+    id: number
+    image: {
+        beforeImage: string
+        afterImage: string
+    }
+}
