@@ -11,6 +11,7 @@ export const priceOptions : IPriceOptions[] = [
             'Допомога з позуванням, вибором локації, образів, реквізиту',
         ],
         price: '300 zl',
+        category: "love-story",
         image: {
                 imageUrl: "src/assets/images/beforeAfter/imgFirstBefore.jpg",
                 imageAlt: "An image"
@@ -26,6 +27,7 @@ export const priceOptions : IPriceOptions[] = [
             'Допомога з позуванням, вибором локації, образів, реквізиту',
         ],
         price: '400 zl',
+        category: "love-story",
         image: {
                 imageUrl: "src/assets/images/beforeAfter/imgSecondAfter.jpg",
                 imageAlt: "An image"

@@ -15,7 +15,7 @@ export default function PriceOptionDetails({priceOption} : PriceOptionDetailsPro
             ))}
             <div className="flex justify-between pt-5 items-center">
                 <h3 className="font-bold text-3xl">{priceOption.price}</h3>
-                <Link to={""} className="self-end" style={{textDecoration: "underline"}}>Переглянути роботи</Link>
+                <Link to={`gallery/${priceOption.category}`} className="self-end" style={{textDecoration: "underline"}}>Переглянути роботи</Link>
             </div>
         </div>
     )
