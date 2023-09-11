@@ -1,4 +1,5 @@
 import {IPriceOptions} from "../models.ts";
+import {Link} from "react-router-dom";
 
 interface PriceOptionDetailsProps {
     priceOption: IPriceOptions
@@ -12,7 +13,10 @@ export default function PriceOptionDetails({priceOption} : PriceOptionDetailsPro
                     <li>{info}</li>
                 </ul>
             ))}
-            <h3 className="font-bold text-3xl pt-5">{priceOption.price}</h3>
+            <div className="flex justify-between pt-5 items-center">
+                <h3 className="font-bold text-3xl">{priceOption.price}</h3>
+                <Link to={""} className="self-end" style={{textDecoration: "underline"}}>Переглянути роботи</Link>
+            </div>
         </div>
     )
 }

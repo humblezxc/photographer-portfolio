@@ -5,6 +5,6 @@ interface PriceOptionImagesProps {
 }
 export default function PriceOptionImages({image} : PriceOptionImagesProps) {
     return(
-        <img style={{width: "600px"}} src={image.image.imageUrl} alt={image.image.imageAlt}/>
+        <img className="p-5" style={{width: "600px"}} src={image.image.imageUrl} alt={image.image.imageAlt}/>
     )
 }
