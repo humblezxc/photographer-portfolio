@@ -1,3 +1,4 @@
+
 const routes = {
     ROOT: "/",
     GALLERY: "gallery",
@@ -5,6 +6,7 @@ const routes = {
     CONTACT: "contact",
     PRESETS: "presets",
     PRICE: "price",
+    PROCESSING: "processing",
 }
 
 export {routes}
