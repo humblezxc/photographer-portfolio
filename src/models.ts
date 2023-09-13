@@ -75,51 +75,6 @@ export interface ICategories {
             id: number
             imageUrl: string
             imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
-        },
-        {
-            id: number
-            imageUrl: string
-            imageAlt: string
         }
     ]
 }
