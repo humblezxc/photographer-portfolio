@@ -2,6 +2,9 @@ import {categories} from '../data/gallery.ts'
 import {Link} from "react-router-dom";
 
 export default function Gallery() {
+    const newCat = categories[0]
+    console.log(newCat)
+        newCat.image.map(img => console.log(img) )
     return (
         <main>
             <section className="container flex flex-col gap-16 py-5">
@@ -10,7 +13,7 @@ export default function Gallery() {
                         <div className="flex flex-row justify-between">
                             <h2 className="font-bold text-2xl">{category.title}</h2>
                             <Link
-                                to={`/gallery/${category.title}`}
+                                to={`/gallery/${category.key}`}
                                 className="hover:underline flex items-center"
                             >
                                 more photos
@@ -31,7 +34,7 @@ export default function Gallery() {
                             </Link>
                         </div>
                         <div className="flex gap-5">
-                            {category.image.map(image => <div><img key={image.id} src={image.imageUrl}
+                            {category.image.map(image => <div key={image.id}><img src={`../${image.imageUrl}`}
                                                                    alt={image.imageAlt}/></div>)}
                         </div>
                     </div>

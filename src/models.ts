@@ -59,7 +59,53 @@ export interface IProcessingImages {
 export interface ICategories {
     id: number
     title: string
+    key: string
     image: [
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
+        {
+            id: number
+            imageUrl: string
+            imageAlt: string
+        },
         {
             id: number
             imageUrl: string
