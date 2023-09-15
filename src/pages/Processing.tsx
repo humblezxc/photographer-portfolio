@@ -6,8 +6,8 @@ export default function Processing() {
 
     return (
         <main>
-            <section className="container py-5">
-                <div className="flex flex-col gap-12 m-auto" style={{maxWidth: "650px"}}>
+            <section className="container pb-10">
+                <div className="flex flex-col gap-12 m-auto max-w-screen-sm">
                     {processingImages.map(photos => (
                             <ReactCompareImage key={photos.id}
                                                leftImage={photos.image.beforeImage}

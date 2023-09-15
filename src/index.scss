@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Playfair+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@400;500&family=Montserrat:wght@500&family=Playfair+Display&display=swap');
 html {
   overflow-y: scroll;
 }
@@ -31,4 +31,7 @@ button {
   cursor: pointer;
 
   font-family: 'Montserrat', sans-serif;
+}
+.hebo-font {
+  font-family: Heebo, sans-serif;
 }
