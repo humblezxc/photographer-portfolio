@@ -10,22 +10,25 @@ import Contact from "../pages/Contact.tsx";
 import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
 import Category from "./Category.tsx";
-export default function AppRoutes(){
-    return(
+import {Modal} from "../pages/Modal.tsx";
+
+export default function AppRoutes() {
+    return (
         <>
-        <Routes>
-            <Route path={routes.ROOT} element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route path={routes.GALLERY} element={<Gallery />}/>
-                <Route path={`${routes.GALLERY}/:key`} element={<Category />} />
-                <Route path={routes.PRICE} element={<Price />} />
-                <Route path={routes.PROCESSING} element={<Processing/>} />
-                <Route path={routes.ABOUT} element={<About />}/>
-                <Route path={routes.CONTACT} element={<Contact />}/>
-                <Route path={routes.PRESETS} element={<Presets />}/>
-                <Route path="*" element={<NotFoundPage />} />
-            </Route>
-        </Routes>
+            <Routes>
+                <Route path={routes.ROOT} element={<Layout/>}>
+                    <Route index element={<Home/>}/>
+                    <Route path={routes.GALLERY} element={<Gallery/>}/>
+                    <Route path={`${routes.GALLERY}/:key`} element={<Category/>}/>
+                    <Route path={routes.PRICE} element={<Price/>}/>
+                    <Route path={routes.PROCESSING} element={<Processing/>}/>
+                    <Route path={routes.ABOUT} element={<About/>}/>
+                    <Route path={routes.CONTACT} element={<Modal title='Contact me'>
+                        <Contact/></Modal>}/>
+                    <Route path={routes.PRESETS} element={<Presets/>}/>
+                    <Route path="*" element={<NotFoundPage/>}/>
+                </Route>
+            </Routes>
         </>
     )
 }
