@@ -2,7 +2,7 @@ import React from "react";
 
 interface ModalProps {
     children: React.ReactNode
-    title: string
+    title?: string
 }
 
 export function Modal({children, title}: ModalProps) {
