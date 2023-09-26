@@ -6,12 +6,9 @@ import Presets from "../pages/Presets.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";
 import Gallery from "../pages/Gallery.tsx";
 import About from "../pages/About.tsx";
-import Contact from "../pages/Contact.tsx";
 import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
 import Category from "./Category.tsx";
-import {Modal} from "../pages/Modal.tsx";
-
 export default function AppRoutes() {
     return (
         <>
@@ -23,8 +20,6 @@ export default function AppRoutes() {
                     <Route path={routes.PRICE} element={<Price/>}/>
                     <Route path={routes.PROCESSING} element={<Processing/>}/>
                     <Route path={routes.ABOUT} element={<About/>}/>
-                    <Route path={routes.CONTACT} element={<Modal title='Contact me'>
-                        <Contact/></Modal>}/>
                     <Route path={routes.PRESETS} element={<Presets/>}/>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Route>
