@@ -8,7 +8,7 @@ import Gallery from "../pages/Gallery.tsx";
 import About from "../pages/About.tsx";
 import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
-import Category from "./Category.tsx";
+import Category from "../pages/Category.tsx";
 export default function AppRoutes() {
     return (
         <>
