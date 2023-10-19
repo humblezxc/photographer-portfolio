@@ -9,6 +9,7 @@ import About from "../pages/About.tsx";
 import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
 import Category from "../pages/Category.tsx";
+import CookiesPage from "../pages/CookiesPage.tsx";
 export default function AppRoutes() {
     return (
         <>
@@ -21,6 +22,7 @@ export default function AppRoutes() {
                     <Route path={routes.PROCESSING} element={<Processing/>}/>
                     <Route path={routes.ABOUT} element={<About/>}/>
                     <Route path={routes.PRESETS} element={<Presets/>}/>
+                    <Route path="cookies" element={<CookiesPage />}/>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Route>
             </Routes>
