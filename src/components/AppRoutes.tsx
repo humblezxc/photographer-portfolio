@@ -10,6 +10,7 @@ import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
 import Category from "../pages/Category.tsx";
 import CookiesPage from "../pages/CookiesPage.tsx";
+import Login from "../pages/Login.tsx";
 export default function AppRoutes() {
     return (
         <>
@@ -23,6 +24,7 @@ export default function AppRoutes() {
                     <Route path={routes.ABOUT} element={<About/>}/>
                     <Route path={routes.PRESETS} element={<Presets/>}/>
                     <Route path="cookies" element={<CookiesPage />}/>
+                    <Route path={routes.LOGIN} element={<Login />}/>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

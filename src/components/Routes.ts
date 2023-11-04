@@ -6,6 +6,7 @@ const routes = {
     PRESETS: "presets",
     PRICE: "price",
     PROCESSING: "processing",
+    LOGIN: 'login',
 }
 
 export {routes}
