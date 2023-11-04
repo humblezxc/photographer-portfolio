@@ -4,7 +4,7 @@ import {presets, presetPhotos} from "../data/presets.ts";
 
 export default function Presets() {
     return (
-        <main className="">
+        <main>
             <section className="bg-white container flex flex-col  py-5 w-full">
                 {presets.map(preset => (
                     <div key={preset.id}>

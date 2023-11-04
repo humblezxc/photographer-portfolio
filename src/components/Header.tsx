@@ -1,5 +1,16 @@
 import {NavLink} from "react-router-dom"
+import Contact from "../pages/Contact.tsx";
+import {Modal} from "../pages/Modal.tsx";
+import {useAppDispatch, useAppSelector} from "../hooks/redux.ts";
+import { openModal } from "../store/reducers/stateSlice.ts";
+
 export default function Header() {
+    const { isModalClosed } = useAppSelector((state) => state.stateReducer);
+    const dispatch = useAppDispatch();
+
+    const handleModal = () => {
+        dispatch(openModal(true)); // Dispatch the action to open the modal
+    };
     return (
         <header className="sticky">
             <section className="container flex flex-row items-center justify-between py-3">
@@ -109,10 +120,12 @@ c42 -14 195 -129 247 -186 30 -32 104 -109 165 -171 62 -62 136 -142 166 -178
                         <li><NavLink to="/price">Price</NavLink></li>
                         <li><NavLink to="/processing">Processing</NavLink></li>
                         <li><NavLink to="/about">About</NavLink></li>
-                        <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </nav>
                 <div className="relative flex items-center gap-6">
+                    <button className="button" onClick={handleModal}>
+                        Contact
+                    </button>
                     <button className="button button_square">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -145,6 +158,11 @@ c42 -14 195 -129 247 -186 30 -32 104 -109 165 -171 62 -62 136 -142 166 -178
                     </button>
                 </div>
             </section>
+            {isModalClosed && (
+                <Modal title="Contact form">
+                    <Contact/>
+                </Modal>
+            )}
         </header>
     );
 }

@@ -6,12 +6,11 @@ import Presets from "../pages/Presets.tsx";
 import NotFoundPage from "./NotFoundPage.tsx";
 import Gallery from "../pages/Gallery.tsx";
 import About from "../pages/About.tsx";
-import Contact from "../pages/Contact.tsx";
 import Price from "../pages/Price.tsx";
 import Processing from "../pages/Processing.tsx";
-import Category from "./Category.tsx";
-import {Modal} from "../pages/Modal.tsx";
-
+import Category from "../pages/Category.tsx";
+import CookiesPage from "../pages/CookiesPage.tsx";
+import Login from "../pages/Login.tsx";
 export default function AppRoutes() {
     return (
         <>
@@ -23,9 +22,9 @@ export default function AppRoutes() {
                     <Route path={routes.PRICE} element={<Price/>}/>
                     <Route path={routes.PROCESSING} element={<Processing/>}/>
                     <Route path={routes.ABOUT} element={<About/>}/>
-                    <Route path={routes.CONTACT} element={<Modal title='Contact me'>
-                        <Contact/></Modal>}/>
                     <Route path={routes.PRESETS} element={<Presets/>}/>
+                    <Route path="cookies" element={<CookiesPage />}/>
+                    <Route path={routes.LOGIN} element={<Login />}/>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

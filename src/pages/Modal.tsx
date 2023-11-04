@@ -1,4 +1,6 @@
 import React from "react";
+import {useAppDispatch} from "../hooks/redux.ts";
+import {openModal} from "../store/reducers/stateSlice.ts";
 
 interface ModalProps {
     children: React.ReactNode
@@ -6,14 +8,15 @@ interface ModalProps {
 }
 
 export function Modal({children, title}: ModalProps) {
-
+    const dispatch = useAppDispatch()
     const handleClose = () => {
+        dispatch(openModal(false))
     };
 
     return (
         <>
-            <div className="fixed bg-black/50 top-0 right-0 left-0 bottom-0"/>
-            <div className={"w-[300px] md:w-[500px] p-5 rounded-2xl bg-white absolute top-10 left-1/2 -translate-x-1/2"}>
+            <div className="fixed bg-black/50 top-0 right-0 left-0 bottom-0" style={{zIndex: 332}}/>
+            <div className={"w-[300px] md:w-[500px] p-5 rounded-2xl bg-white absolute top-10 left-1/2 -translate-x-1/2"} style={{zIndex: 342}}>
                 <button
                     className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 cursor-pointer"
                     onClick={handleClose}

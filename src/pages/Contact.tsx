@@ -20,7 +20,7 @@ export default function Contact() {
                 <li>
                     <Link className="flex gap-2" to="https://www.instagram.com/fol.photo/">
                         <svg width="40px" height="40px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-                            <rect fill="none" height="256" width="256" />
+                            <rect fill="none" height="256" width="256"/>
                             <circle
                                 cx="128"
                                 cy="128"
@@ -43,7 +43,7 @@ export default function Contact() {
                                 x="36"
                                 y="36"
                             />
-                            <circle cx="180" cy="76" r="8" />
+                            <circle cx="180" cy="76" r="8"/>
                         </svg>
                     </Link>
                 </li>
@@ -85,7 +85,8 @@ export default function Contact() {
                     </Link>
                 </li>
             </ul>
-            <form action={`mailto:fol.photo27@gmail.com?subject=${form.subject}&body=${form.message}`} method="post" className="flex flex-col gap-5">
+            <form action={`mailto:fol.photo27@gmail.com?subject=${form.subject}&body=${form.message}`} method="post"
+                  className="flex flex-col gap-5">
                 <input type="text" name="subject" placeholder="Subject" onChange={handleChange}
                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                 <textarea name="message" placeholder="Message text" onChange={handleChange}

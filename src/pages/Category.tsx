@@ -1,6 +1,6 @@
 import {useParams} from 'react-router-dom'
 import {categories} from "../data/gallery.ts";
-import NotFoundPage from "./NotFoundPage.tsx";
+import NotFoundPage from "../components/NotFoundPage.tsx";
 import Gallery from "react-photo-gallery";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import React from "react";
