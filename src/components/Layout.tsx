@@ -1,12 +1,12 @@
-import Header from "./Header.tsx";
-import {Outlet} from "react-router-dom";
-import Footer from "./Footer.tsx";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import React from "react";
 
-export default function Layout() {
+export default function Layout({children}: {children: React.ReactNode}) {
     return (
         <>
             <Header/>
-            <Outlet/>
+            {children}
             <Footer/>
         </>
     );

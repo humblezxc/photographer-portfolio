@@ -1,27 +1,28 @@
-import {NavLink} from "react-router-dom"
-import Contact from "../pages/Contact.tsx";
-import {Modal} from "../pages/Modal.tsx";
-import {useAppDispatch, useAppSelector} from "../hooks/redux.ts";
-import { openModal } from "../store/reducers/stateSlice.ts";
+import Link from "next/link";
+import {useAppDispatch, useAppSelector} from "@/hooks/redux";
+import {openModal} from "@/store/reducers/stateSlice";
+import {Modal} from "@/components/Modal";
+import Contact from "@/app/contact/page";
 
 export default function Header() {
-    const { isModalClosed } = useAppSelector((state) => state.stateReducer);
+    const { isModalOpen } = useAppSelector((state) => state.stateReducer);
     const dispatch = useAppDispatch();
 
     const handleModal = () => {
-        dispatch(openModal(true)); // Dispatch the action to open the modal
+        dispatch(openModal(true));
     };
     return (
         <header className="sticky">
-            <section className="container flex flex-row items-center justify-between py-3">
-                <NavLink to="/">
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                         width="60px" height="60px" viewBox="0 0 1170.000000 1214.000000"
-                         preserveAspectRatio="xMidYMid meet">
+            <section className="py-3">
+                <div className="container flex flex-row items-center justify-between">
+                    <Link href="/">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                             width="60px" height="60px" viewBox="0 0 1170.000000 1214.000000"
+                             preserveAspectRatio="xMidYMid meet">
 
-                        <g transform="translate(0.000000,1214.000000) scale(0.100000,-0.100000)"
-                           fill="#000000" stroke="none">
-                            <path d="M5420 11738 c-23 -27 -107 -177 -102 -182 3 -3 -2 -8 -11 -12 -9 -3
+                            <g transform="translate(0.000000,1214.000000) scale(0.100000,-0.100000)"
+                               fill="#000000" stroke="none">
+                                <path d="M5420 11738 c-23 -27 -107 -177 -102 -182 3 -3 -2 -8 -11 -12 -9 -3
 -13 -12 -10 -20 3 -8 0 -14 -5 -14 -9 0 -26 -36 -24 -50 0 -3 -6 -12 -14 -21
 -8 -9 -16 -26 -17 -37 0 -11 -4 -19 -8 -17 -3 3 -12 -15 -18 -38 -7 -23 -22
 -57 -33 -74 -11 -18 -17 -37 -13 -43 3 -5 1 -10 -5 -10 -6 0 -9 -4 -5 -9 3 -5
@@ -110,55 +111,56 @@ c42 -14 195 -129 247 -186 30 -32 104 -109 165 -171 62 -62 136 -142 166 -178
 14 48 14 56 0 9 8 27 18 40 11 13 21 40 25 60 3 19 14 55 25 80 11 24 23 58
 27 76 3 17 13 37 21 44 8 6 14 19 14 28 0 23 72 130 128 190 39 41 54 51 81
 51 18 0 30 4 27 9 -6 10 50 7 85 -4z"/>
-                        </g>
-                    </svg>
-                </NavLink>
-                <nav>
-                    <ul className="flex flex-row gap-14 uppercase">
-                        <li><NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="/gallery">Gallery</NavLink></li>
-                        <li><NavLink to="/price">Price</NavLink></li>
-                        <li><NavLink to="/processing">Processing</NavLink></li>
-                        <li><NavLink to="/about">About</NavLink></li>
-                    </ul>
-                </nav>
-                <div className="relative flex items-center gap-6">
-                    <button className="button" onClick={handleModal}>
-                        Contact
-                    </button>
-                    <button className="button button_square">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            className="bi bi-person"
-                            viewBox="0 0 16 16"
-                        >
-                            <path
-                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
-                            />
+                            </g>
                         </svg>
-                    </button>
-                    <button className="button button_square">
-                        EN
-                        {/*<svg*/}
-                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                        {/*    width="16"*/}
-                        {/*    height="16"*/}
-                        {/*    fill="currentColor"*/}
-                        {/*    className="bi bi-arrow-down-short"*/}
-                        {/*    viewBox="0 0 16 16"*/}
-                        {/*>*/}
-                        {/*    <path*/}
-                        {/*        fillRule="evenodd"*/}
-                        {/*        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"*/}
-                        {/*    />*/}
-                        {/*</svg>*/}
-                    </button>
+                    </Link>
+                    <nav>
+                        <ul className="flex flex-row gap-14 uppercase">
+                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/gallery">Gallery</Link></li>
+                            <li><Link href="/price">Price</Link></li>
+                            <li><Link href="/processing">Processing</Link></li>
+                            <li><Link href="/about">About</Link></li>
+                        </ul>
+                    </nav>
+                    <div className="relative flex items-center gap-6">
+                        <button className="button" onClick={handleModal}>
+                            Contact
+                        </button>
+                        <button className="button button_square">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                className="bi bi-person"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+                                />
+                            </svg>
+                        </button>
+                        <button className="button button_square">
+                            EN
+                            {/*<svg*/}
+                            {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                            {/*    width="16"*/}
+                            {/*    height="16"*/}
+                            {/*    fill="currentColor"*/}
+                            {/*    className="bi bi-arrow-down-short"*/}
+                            {/*    viewBox="0 0 16 16"*/}
+                            {/*>*/}
+                            {/*    <path*/}
+                            {/*        fillRule="evenodd"*/}
+                            {/*        d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"*/}
+                            {/*    />*/}
+                            {/*</svg>*/}
+                        </button>
+                    </div>
                 </div>
             </section>
-            {isModalClosed && (
+            {isModalOpen && (
                 <Modal title="Contact form">
                     <Contact/>
                 </Modal>

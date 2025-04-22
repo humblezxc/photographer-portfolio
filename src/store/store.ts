@@ -1,5 +1,6 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import stateReducer from "./reducers/stateSlice.ts";
+import stateReducer from "./reducers/stateSlice";
+
 const rootReducer = combineReducers({
     stateReducer
 })
