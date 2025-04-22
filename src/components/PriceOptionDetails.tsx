@@ -1,5 +1,5 @@
-import {IPriceOptions} from "../models.ts";
-import {Link} from "react-router-dom";
+import Link from "next/link";
+import {IPriceOptions} from "@/models";
 
 interface PriceOptionDetailsProps {
     priceOption: IPriceOptions
@@ -15,7 +15,7 @@ export default function PriceOptionDetails({priceOption} : PriceOptionDetailsPro
             ))}
             <div className="flex justify-between pt-5 items-center">
                 <h3 className="font-bold text-3xl">{priceOption.price}</h3>
-                <Link to={`gallery/${priceOption.category}`} className="self-end" style={{textDecoration: "underline"}}>Переглянути роботи</Link>
+                <Link href={`gallery/${priceOption.category}`} className="self-end" style={{textDecoration: "underline"}}>Переглянути роботи</Link>
             </div>
         </div>
     )

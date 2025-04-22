@@ -1,6 +1,6 @@
-import {IPriceOptions} from "../models.ts";
-import PriceOptionDetails from "./PriceOptionDetails.tsx";
-import PriceOptionImages from "./PriceOptionImages.tsx";
+import PriceOptionImages from "@/components/PriceOptionImages";
+import PriceOptionDetails from "@/components/PriceOptionDetails";
+import {IPriceOptions} from "@/models";
 
 interface PriceOptionProps {
     priceOption: IPriceOptions

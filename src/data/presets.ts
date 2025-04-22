@@ -1,10 +1,10 @@
-import {IPresetPhotos, IPresets} from "../models.ts";
+import {IPresetPhotos, IPresets} from "@/models";
 
 export const presets: IPresets[] = [
     {
         id: 1,
         title: 'Family presets',
-        titleImage: "src/assets/images/beforeAfter/imgFirstBefore.jpg",
+        titleImage: "/images/beforeAfter/imgFirstBefore.jpg",
         description: "Presets designed to process individual portrait shots, both plein air and studio.",
         packageInfo: [
             '24 presets: 17 color and 7 black and white',
@@ -21,25 +21,25 @@ export const presetPhotos: IPresetPhotos[] = [
         sliderImages: [
             {
                 beforeImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgFirstBefore.jpg'
+                    imageUrl: '/images/beforeAfter/imgFirstBefore.jpg'
                 },
                 afterImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgFirstAfter.jpg'
+                    imageUrl: '/images/beforeAfter/imgFirstAfter.jpg'
                 },
             },
             {
                 beforeImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgSecondBefore.jpg'
+                    imageUrl: '/images/beforeAfter/imgSecondBefore.jpg'
                 },
                 afterImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgSecondAfter.jpg'
+                    imageUrl: '/images/beforeAfter/imgSecondAfter.jpg'
                 },
             },
             {
                 beforeImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgThirdBefore.jpg',
+                    imageUrl: '/images/beforeAfter/imgThirdBefore.jpg',
                 }, afterImg: {
-                    imageUrl: 'src/assets/images/beforeAfter/imgThirdAfter.jpg',
+                    imageUrl: '/images/beforeAfter/imgThirdAfter.jpg',
                 },
             },
         ],

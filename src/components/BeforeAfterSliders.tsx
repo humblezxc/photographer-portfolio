@@ -1,6 +1,6 @@
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
-import {IPresetPhotos} from "../models.ts";
+import {IPresetPhotos} from "@/models";
 
 interface PresetPhotosProps {
     photos: IPresetPhotos;

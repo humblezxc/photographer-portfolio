@@ -1,4 +1,4 @@
-import {IPriceOptions} from "../models.ts";
+import {IPriceOptions} from "@/models";
 
 interface PriceOptionImagesProps {
     priceOptionImage: IPriceOptions

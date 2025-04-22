@@ -43,9 +43,9 @@ export interface IPriceOptions {
     price: string
     category: string
     image: {
-            imageUrl: string
-            imageAlt: string
-        }
+        imageUrl: string
+        imageAlt: string
+    }
 }
 
 export interface IProcessingImages {
